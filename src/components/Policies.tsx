@@ -5,7 +5,7 @@ import digitalClassroom from '@/assets/digital-classroom.jpg';
 import localBusiness from '@/assets/local-business.jpg';
 import sustainableDevelopment from '@/assets/sustainable-development.jpg';
 import townHall from '@/assets/town-hall.jpg';
-import elderCare from '@/assets/elderly-care.jpg';
+import harborMaritime from '@/assets/harbor-maritime.png';
 
 const Policies = () => {
   const policies = [
@@ -55,7 +55,7 @@ const Policies = () => {
       title: "Udvikling ikke afvikling",
       description: "Fremadrettet tænkning og investeringer",
       content: "Vi skal arbejde for at få frigjort mere land til, at nye familier kan flytte fra deres lejligheder i byerne og købe en byggegrund eller et parcelhus med have. Vi skal turde tænke større og ud af boksen - herunder færdiggørelsen af det maritime center og et kulturhus på tippen.",
-      image: elderCare,
+      image: harborMaritime,
       imageAlt: "Udvikling og fremgang",
       icon: <TrendingUp size={24} />,
       isReversed: true

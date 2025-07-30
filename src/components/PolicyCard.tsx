@@ -48,9 +48,9 @@ const PolicyCard = ({ title, description, content, image, imageAlt, icon, isReve
       <div className={isReversed ? 'lg:col-start-1' : ''}>
         <div className="relative">
           <img 
-            src={image}
-            alt={imageAlt}
-            className="w-full h-64 lg:h-80 object-cover rounded-2xl shadow-elegant"
+        src={image}
+        alt={imageAlt}
+        className="w-full h-80 lg:h-80 object-cover object-top rounded-2xl shadow-elegant"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-2xl"></div>
         </div>

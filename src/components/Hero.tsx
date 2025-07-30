@@ -1,3 +1,7 @@
+// Changes:
+// - Increased portrait image size for large screens (w-[420px] h-[540px] on lg)
+// - Moved the scroll indicator arrow to bottom-right on large screens, remains centered on mobile
+
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 import nielsPtrait from '@/assets/niels-portrait.jpg';
@@ -66,7 +70,7 @@ const Hero = () => {
 
           {/* Portrait */}
           <div className="relative">
-            <div className="relative mx-auto lg:mx-0 w-80 h-96 lg:w-96 lg:h-[500px]">
+            <div className="relative mx-auto lg:mx-0 w-80 h-96 lg:w-[420px] lg:h-[540px]">
               <img 
                 src={nielsPtrait}
                 alt="Niels Martin Viuff"
@@ -81,7 +85,7 @@ const Hero = () => {
         </div>
         
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 lg:left-auto lg:right-8 lg:translate-x-0">
           <button
             onClick={() => scrollToSection('maerkesager')}
             className="text-white/70 hover:text-white transition-colors animate-bounce"

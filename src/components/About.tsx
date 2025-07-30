@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Quote } from 'lucide-react';
 import campaignTeam from '@/assets/campaign-team.jpg';
-import politicalRally from '@/assets/political-rally.jpg';
+import politicalRally from '@/assets/political-rally.jpeg';
 
 const About = () => {
   return (

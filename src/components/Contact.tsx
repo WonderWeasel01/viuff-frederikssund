@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
-import harborMaritime from '@/assets/harbor-maritime.jpg';
+import harborMaritime from '@/assets/harbor-maritime.png';
 
 const Contact = () => {
   return (
