@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 interface PolicyCardProps {
+  id?: string;
   title: string;
   description: string;
   content: string;
@@ -12,9 +13,9 @@ interface PolicyCardProps {
   isReversed?: boolean;
 }
 
-const PolicyCard = ({ title, description, content, image, imageAlt, icon, isReversed = false }: PolicyCardProps) => {
+const PolicyCard = ({ id, title, description, content, image, imageAlt, icon, isReversed = false }: PolicyCardProps) => {
   return (
-    <div className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center ${isReversed ? 'lg:grid-flow-col-dense' : ''}`}>
+    <div id={id} className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center ${isReversed ? 'lg:grid-flow-col-dense' : ''}`}>
       {/* Content */}
       <div className={isReversed ? 'lg:col-start-2' : ''}>
         <Card className="border-none shadow-elegant bg-gradient-section">
@@ -37,7 +38,11 @@ const PolicyCard = ({ title, description, content, image, imageAlt, icon, isReve
             <p className="text-foreground leading-relaxed mb-6">
               {content}
             </p>
-            <Button variant="conservative" size="lg">
+            <Button
+              variant="conservative"
+              size="lg"
+              className="whitespace-normal break-words max-w-xs text-ellipsis overflow-hidden line-clamp-2"
+            >
               Læs mere om {title.toLowerCase()}
             </Button>
           </CardContent>
