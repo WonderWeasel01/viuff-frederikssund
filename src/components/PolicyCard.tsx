@@ -11,9 +11,24 @@ interface PolicyCardProps {
   imageAlt: string;
   icon: ReactNode;
   isReversed?: boolean;
+  readMore: string;
+  isOpen: boolean;
+  onToggle: () => void;
 }
 
-const PolicyCard = ({ id, title, description, content, image, imageAlt, icon, isReversed = false }: PolicyCardProps) => {
+const PolicyCard = ({
+  id,
+  title,
+  description,
+  content,
+  image,
+  imageAlt,
+  icon,
+  isReversed = false,
+  readMore,
+  isOpen,
+  onToggle
+}: PolicyCardProps) => {
   return (
     <div id={id} className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center ${isReversed ? 'lg:grid-flow-col-dense' : ''}`}>
       {/* Content */}
@@ -42,8 +57,9 @@ const PolicyCard = ({ id, title, description, content, image, imageAlt, icon, is
               variant="conservative"
               size="lg"
               className="whitespace-normal break-words max-w-xs text-ellipsis overflow-hidden line-clamp-2"
+              onClick={onToggle}
             >
-              Læs mere om {title.toLowerCase()}
+              {isOpen ? "Luk" : `Læs mere om ${title.toLowerCase()}`}
             </Button>
           </CardContent>
         </Card>
@@ -53,9 +69,9 @@ const PolicyCard = ({ id, title, description, content, image, imageAlt, icon, is
       <div className={isReversed ? 'lg:col-start-1' : ''}>
         <div className="relative">
           <img 
-        src={image}
-        alt={imageAlt}
-        className="w-full h-80 lg:h-80 object-cover object-top rounded-2xl shadow-elegant"
+            src={image}
+            alt={imageAlt}
+            className="w-full h-80 lg:h-80 object-cover object-top rounded-2xl shadow-elegant"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-2xl"></div>
         </div>
